@@ -8,46 +8,44 @@ export default function Navbar() {
 
   return (
     <nav className="relative w-full border-b border-black bg-[#f2f0ea] z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 md:h-20">
-          
-          {/* LOGO */}
-          <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl md:text-3xl font-black tracking-tighter">
-              VOXLORE.
-            </Link>
-          </div>
+      <div className="max-w-7xl mx-auto px-4 h-16 md:h-20 flex justify-between items-center">
+        
+        {/* LOGO - Kita paksa tetep di depan */}
+        <div className="relative z-[60]">
+          <Link href="/" className="text-2xl md:text-3xl font-black tracking-tighter text-black">
+            VOXLORE.
+          </Link>
+        </div>
 
-          {/* DESKTOP MENU (Muncul di Laptop) */}
+        {/* RIGHT SIDE (Menu Desktop & Buttons) */}
+        <div className="flex items-center gap-2 md:gap-8">
+          {/* DESKTOP MENU */}
           <div className="hidden md:flex items-center space-x-8 text-xs font-bold tracking-widest">
             <Link href="/topics" className="hover:opacity-60 transition">TOPICS</Link>
             <Link href="/feeds" className="hover:opacity-60 transition">FEEDS</Link>
             <Link href="/search" className="hover:opacity-60 transition">SEARCH</Link>
           </div>
 
-          {/* RIGHT SIDE (Hamburger & Subscribe) */}
-          <div className="flex items-center gap-4">
-            {/* SUBSCRIBE BUTTON */}
-            <button className="bg-black text-white px-4 py-2 text-[10px] md:text-xs font-bold uppercase tracking-widest hover:bg-gray-800 transition">
-              Subscribe
-            </button>
+          {/* SUBSCRIBE - Kita kecilin dikit di HP biar muat */}
+          <button className="bg-black text-white px-3 py-1.5 md:px-4 md:py-2 text-[10px] md:text-xs font-bold uppercase tracking-widest z-[60]">
+            Subscribe
+          </button>
 
-            {/* HAMBURGER BUTTON (Muncul cuma di HP) */}
-            <button 
-              onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden flex flex-col gap-1.5 focus:outline-none p-2"
-            >
-              <span className={`block w-6 h-0.5 bg-black transition-transform ${isOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-              <span className={`block w-6 h-0.5 bg-black transition-opacity ${isOpen ? 'opacity-0' : ''}`}></span>
-              <span className={`block w-6 h-0.5 bg-black transition-transform ${isOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
-            </button>
-          </div>
+          {/* HAMBURGER / CLOSE BUTTON */}
+          <button 
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden relative z-[60] w-8 h-8 flex flex-col justify-center items-center gap-1.5"
+          >
+            <span className={`block w-6 h-0.5 bg-black transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+            <span className={`block w-6 h-0.5 bg-black transition-all duration-300 ${isOpen ? 'opacity-0' : ''}`}></span>
+            <span className={`block w-6 h-0.5 bg-black transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+          </button>
         </div>
       </div>
 
-      {/* MOBILE MENU DROPDOWN */}
-      <div className={`md:hidden absolute top-full left-0 w-full bg-[#f2f0ea] border-b border-black transition-all duration-300 ease-in-out ${isOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
-        <div className="flex flex-col space-y-4 p-6 text-sm font-bold tracking-[0.2em]">
+      {/* MOBILE MENU DROPDOWN - Sekarang dia beneran di bawah navbar */}
+      <div className={`md:hidden absolute top-0 left-0 w-full bg-[#f2f0ea] transition-all duration-500 ease-in-out z-[55] shadow-xl ${isOpen ? 'h-screen opacity-100' : 'h-0 opacity-0 overflow-hidden'}`}>
+        <div className="flex flex-col items-center justify-center h-full space-y-8 text-xl font-bold tracking-[0.3em] uppercase">
           <Link href="/topics" onClick={() => setIsOpen(false)}>TOPICS</Link>
           <Link href="/feeds" onClick={() => setIsOpen(false)}>FEEDS</Link>
           <Link href="/search" onClick={() => setIsOpen(false)}>SEARCH</Link>
