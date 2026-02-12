@@ -9,7 +9,7 @@ export default function Home() {
     <main className="bg-[#f8f7f3] min-h-screen">
       <section className="px-6 py-12 md:py-20 border-b border-zinc-200">
         <div className="max-w-7xl mx-auto">
-          {/* Tambahin 'touch-manipulation' biar respon sentuhan lebih cepet */}
+          
           <Link href={`/articles/${featuredArticle.category}/${featuredArticle.slug}`} className="group grid md:grid-cols-2 gap-12 items-center touch-manipulation">
             <div className="overflow-hidden bg-zinc-900">
               <img 
@@ -51,7 +51,7 @@ export default function Home() {
               <div className="overflow-hidden bg-zinc-900 mb-6">
                 <img 
                   src={article.image} 
-                  className="aspect-[4/3] object-cover transition-all duration-500" 
+                  className="aspect-ratio: 4/3;object-cover transition-all duration-500" 
                   alt={article.title}
                 />
               </div>
