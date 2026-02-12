@@ -57,7 +57,7 @@ export default function Home() {
             <Link 
               key={article.id} 
               href={`/articles/${article.category}/${article.slug}`}
-              className="group touch-manipulation border-b border-zinc-200 pb-12 last:border-0 md:border-0 md:pb-0 transition-all"
+              className="group touch-manipulation border-b-2 border-zinc-200 pb-12 last:border-0 md:border-0 md:pb-0 transition-all"
             >
               {/* Thumbnail: FIX ASPECT RATIO TANPA ERROR */}
               <div className="overflow-hidden bg-zinc-200 mb-6 aspect-[4/3] relative">
