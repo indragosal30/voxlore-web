@@ -42,14 +42,16 @@ export default function LatestPage() {
                 <h2 className="mt-2 font-serif text-3xl font-bold leading-tight text-black group-hover:text-[#800020] group-active:text-[#800020] transition-colors duration-300">
                   {article.title}
                 </h2>
+
+                
                 
                 <p className="mt-4 text-zinc-600 line-clamp-3 leading-relaxed font-sans text-sm">
                   {article.excerpt}
                 </p>
 
                 <div className="mt-6 flex items-center gap-4 text-[10px] font-bold uppercase tracking-widest text-zinc-400">
-                  <span>{article.date}</span>
-                  <span className="h-px w-8 bg-zinc-200"></span>
+                  <span className="text-zinc-600">{article.date}</span>
+                <span className="h-px w-8 bg-zinc-200"></span>
                   <span className="text-[#181717] group-hover:translate-x-2 transition-transform duration-300">
                     Read More →
                   </span>
