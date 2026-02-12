@@ -30,7 +30,7 @@ export default function Home() {
               <span className="text-[#800020] font-bold uppercase tracking-[0.3em] text-[10px]">
                 Featured Story
               </span>
-              <h2 className="font-serif text-5xl md:text-7xl font-black mt-4 leading-[0.9] tracking-tighter text-[#181717] group-hover:text-[#800020] transition-colors duration-300">
+              <h2 className="font-serif text-5xl md:text-5xl font-black mt-4 leading-[0.9] tracking-tighter text-[#181717] group-hover:text-[#800020] transition-colors duration-300">
                 {featuredArticle.title}
               </h2>
               <p className="mt-6 text-lg text-zinc-600 leading-relaxed italic font-serif">
@@ -78,7 +78,7 @@ export default function Home() {
                   {article.category}
                 </span>
                
-                <h4 className="font-serif text-2xl font-black mt-2 leading-tight text-[#181717] group-hover:text-[#800020] group-active:text-[#800020] transition-colors duration-300">
+                <h4 className="font-serif text-2xl font-black mt-2 leading-tight hover:underline text-[#181717] group-hover:text-[#800020] group-active:text-[#800020] transition-colors duration-300">
                   {article.title}
                 </h4>
                

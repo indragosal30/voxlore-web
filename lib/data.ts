@@ -1,14 +1,16 @@
 export const ARTICLES = [
     {
     id: 1,
-    title: "DIET COKE: Obsesi Palsu Gen Z?",
-    slug: "diet-coke-obsesi-palsu-gen-z",
-    category: "every lore",
-    excerpt: "Mengapa Diet Coke jadi obsesi palsu di kalangan Gen Z?",
-    date: "2026-02-11",
+    title: "Elon Musk Rencana Bangun Pabrik AI di bulan - Realistis atau Hype?",
+    slug: "elon-musk-xai-bangun-pabrik-ai-bulan-spacex",
+    category: "beyond system",
+    excerpt: "Ambisi Elon Musk mendirikan fasilitas produksi AI di bulan dan implikasinya bagi industri teknologi.",
+    date: "2026-02-12",
     publisher: "Voxlore Editorial Team",
     image: "https://images.unsplash.com/photo-1505761671935-60b3a7427bad",
-    content: `Diet Coke menjadi simbol kebiasaan dan obsesi palsu di kalangan Gen Z. Dari sekadar minuman ringan, Diet Coke kini menjadi bagian dari identitas dan gaya hidup mereka. Apa yang membuat Diet Coke begitu istimewa bagi generasi muda?`
+    content: `Bukan lagi data center gede di gurun atau gunung, tapi jutaan satelit AI mengorbit Matahari, powered by solar unlimited, dingin alami di vacuum space.
+    Itu visi Elon Musk sekarang. Tanggal 10 Februari 2026, di all-hands meeting xAI, Musk bilang langsung: "You have to go to the moon." Ini bukan cuma omong doang,
+    setelah SpaceX acquire xAI (merger resmi awal Februari), fokusnya bergeser dari Mars ke bulan. Kenapa? Karena bulan itu deket, murah, dan punya potensi gede buat bangun infrastruktur teknologi masa depan, termasuk AI.`,
     },
     {
     id: 2,

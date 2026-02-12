@@ -22,8 +22,8 @@ export default function FeedsPage() {
             <Link 
               key={item.id} 
               href={`/articles/${item.category}/${item.slug}`}
-              className="group block bg-white border border-zinc-200 p-6 hover:shadow-xl active:scale-[0.98] transition-all duration-300 touch-manipulation"
-            >
+              className="group block bg-white border border-zinc-200 p-6 hover:shadow-xl active:scale-[0.98] transition-all duration-300 touch-manipulation">
+            
               <div className="flex gap-6 items-center">
                 <div className="h-24 w-24 shrink-0 overflow-hidden bg-zinc-900">
                   <img 
