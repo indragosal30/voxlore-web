@@ -14,37 +14,45 @@ export default function LatestPage() {
           </p>
         </header>
 
-        <div className="space-y-12">
+        <div className="space-y-16"> {/* Gue lebarin dikit jarak antar artikel biar lega */}
           {ARTICLES.map((article) => (
             <Link 
               key={article.id} 
               href={`/articles/${article.category}/${article.slug}`}
-              className="group grid gap-8 md:grid-cols-12 items-center"
+              className="group grid gap-8 md:grid-cols-12 items-start touch-manipulation"
             >
-              {/* Thumbnail */}
-              <div className="md:col-span-4 overflow-hidden bg-zinc-900">
+              {/* Thumbnail - SEKARANG DIKUNCI BIAR GAK BERANTAKAN */}
+              <div className="md:col-span-4 overflow-hidden bg-zinc-900 aspect-square w-full relative">
                 <img 
                   src={article.image} 
                   alt={article.title}
-                  className="aspect-square object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
+                  className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-700" 
                 />
+                {/* Overlay dikit biar kesan premium */}
+                <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors" />
               </div>
 
               {/* Info */}
-              <div className="md:col-span-8">
-                <span className="text-[#800020] text-xs font-black uppercase tracking-widest">
+              <div className="md:col-span-8 pt-2">
+                <span className="text-[#800020] text-[10px] font-black uppercase tracking-[0.2em]">
                   {article.category}
                 </span>
-                <h2 className="mt-2 font-serif text-3xl font-bold leading-tight group-hover:text-[#800020] transition-colors text-black">
+                
+                {/* Judul dengan efek Burgundy pas Hover/Active */}
+                <h2 className="mt-2 font-serif text-3xl font-bold leading-tight text-black group-hover:text-[#800020] group-active:text-[#800020] transition-colors duration-300">
                   {article.title}
                 </h2>
-                <p className="mt-4 text-zinc-600 line-clamp-3 leading-relaxed">
+                
+                <p className="mt-4 text-zinc-600 line-clamp-3 leading-relaxed font-sans text-sm">
                   {article.excerpt}
                 </p>
+
                 <div className="mt-6 flex items-center gap-4 text-[10px] font-bold uppercase tracking-widest text-zinc-400">
                   <span>{article.date}</span>
                   <span className="h-px w-8 bg-zinc-200"></span>
-                  <span className="text-[#181717]">Read More →</span>
+                  <span className="text-[#181717] group-hover:translate-x-2 transition-transform duration-300">
+                    Read More →
+                  </span>
                 </div>
               </div>
             </Link>
