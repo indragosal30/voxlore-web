@@ -19,7 +19,6 @@
   }
 }
 
-/* --- TAMBAHAN EFEK INTERAKTIF GLOBAL --- */
 @layer base {
   body {
     background: var(--background);

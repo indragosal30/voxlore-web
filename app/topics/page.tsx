@@ -4,13 +4,13 @@ const TOPICS_LIST = [
   {
     name: "Beyond System",
     desc: "Membedah akar masalah, geopolitik, dan struktur kekuasaan.",
-    color: "bg-[#800020]", // Burgundy
+    color: "bg-[#800020]", 
     slug: "beyond-system"
   },
   {
     name: "Every Lore",
     desc: "Eksplainer tentang sejarah, etimologi, dan fenomena sosial sehari-hari.",
-    color: "bg-[#181717]", // Noir
+    color: "bg-[#181717]",
     slug: "every-lore"
   },
   {
@@ -45,9 +45,7 @@ export default function TopicsPage() {
             <Link 
               key={topic.slug} 
               href={`/topics/${topic.slug}`}
-              className="group relative overflow-hidden bg-white p-12 border border-zinc-200 hover:border-[#800020] transition-all duration-500"
-            >
-              {/* Vibe Noir: Angka Background */}
+              className="group relative overflow-hidden bg-white p-12 border border-zinc-200 hover:border-[#800020] transition-all duration-500">
               <span className="absolute -right-4 -bottom-10 font-serif text-[12rem] font-black opacity-[0.03] group-hover:opacity-[0.08] transition-opacity">
                 {topic.name.charAt(0)}
               </span>

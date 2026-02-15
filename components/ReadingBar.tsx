@@ -18,7 +18,7 @@ export default function ReadingBar() {
   }, []);
 
   return (
-    <div className="fixed top-[64px] left-0 z-50 h-[2px] w-full bg-transparent">
+    <div className="fixed top-16 left-0 z-50 h-2px w-full bg-transparent">
       <div 
         className="h-full bg-[#800020] transition-all duration-150" 
         style={{ width: `${width}%` }}

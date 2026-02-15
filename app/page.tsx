@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Home() {
   const featuredArticle = ARTICLES[0];
   const otherArticles = ARTICLES.slice(1);
-
+  
   return (
     <main className="bg-[#f8f7f3] min-h-screen selection:bg-[#800020] selection:text-white">
       <section className="px-6 py-12 md:py-20 border-b border-zinc-200">
@@ -73,8 +73,7 @@ export default function Home() {
                 <h4 className="font-serif text-2xl font-black mt-2 leading-tight hover:underline text-[#181717] group-hover:text-[#800020] group-active:text-[#800020] transition-colors duration-300">
                   {article.title}
                 </h4>
-               
-                <p className="mt-3 text-sm text-zinc-500 line-clamp-2 font-sans leading-relaxed">
+               <p className="mt-3 text-sm text-zinc-500 line-clamp-2 font-sans leading-relaxed">
                   {article.excerpt}
                 </p>
               </div>
