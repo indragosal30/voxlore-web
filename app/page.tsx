@@ -7,7 +7,7 @@ export default function Home() {
   const otherArticles = ARTICLES.slice(1);
   
   return (
-    <main className="bg-[#181717] min-h-screen selection:bg-[#800020] selection:text-white">
+    <main className="bg-[#f8f7f3] min-h-screen selection:bg-[#800020] selection:text-white">
       <section className="px-6 py-12 md:py-20 border-b border-zinc-200">
         <div className="max-w-7xl mx-auto">
           <Link href={`/articles/${featuredArticle.category}/${featuredArticle.slug}`}
@@ -23,16 +23,16 @@ export default function Home() {
           </div>
 
           <div className="will-change-transform">
-            <span className="text-[#d7d5c6] font-bold uppercase tracking-[0.3em] text-[10px]">
+            <span className="text-[#800020] font-bold uppercase tracking-[0.3em] text-[10px]">
                 Featured Story
             </span>
-              <h1 className="text-5xl md:text-6xl font-black mt-4 leading-[0.9] tracking-tighter text-[#d7d5c6] group-hover:text-[#800020] transition-colors duration-300">
+              <h2 className="font-serif text-5xl md:text-6xl font-black mt-4 leading-[0.9] tracking-tighter text-[#181717] group-hover:text-[#800020] transition-colors duration-300">
                 {featuredArticle.title}
-              </h1>
-              <p className="mt-6 text-lg text-[#d7d5c6] leading-relaxed italic font-serif">
+              </h2>
+              <p className="mt-6 text-lg text-zinc-600 leading-relaxed italic font-serif">
                 {featuredArticle.excerpt}
               </p>
-            <div className="mt-6 font-bold text-xs uppercase tracking-widest inline-block border-b-2 border-[#181717] text-[#d7d5c6] group-hover:border-[#800020] group-hover:text-[#800020] transition-all">
+            <div className="mt-6 font-bold text-xs uppercase tracking-widest inline-block border-b-2 border-[#181717] text-[#181717] group-hover:border-[#800020] group-hover:text-[#800020] transition-all">
                 Read Full Story
             </div>
           </div>
@@ -42,7 +42,7 @@ export default function Home() {
 
       <section className="px-6 py-20 max-w-7xl mx-auto">
         <div className="flex justify-between items-end mb-12 border-b-2 border-[#181717] pb-4">
-          <h2 className="text-3xl font-serif font-black italic text-[#d7d5c6]">Latest Articles</h2>
+          <h3 className="font-serif text-3xl font-bold italic text-[#800020]">Latest Articles</h3>
           <Link
             href="/latest"
             className="text-xs font-bold uppercase tracking-widest hover:text-[#181717] transition-colors text-[#800020]">
@@ -66,13 +66,13 @@ export default function Home() {
               </div>
              
               <div className="flex flex-col">
-                <span className="text-[#d7d5c6] text-[10px] font-black uppercase tracking-[0.2em]">
+                <span className="text-[#800020] text-[10px] font-black uppercase tracking-[0.2em]">
                   {article.category}
                 </span>
                
-                <h3 className="font-serif text-2xl font-black mt-2 leading-tight hover:underline text-[#d7d5c6] group-hover:text-[#800020] group-active:text-[#800020] transition-colors duration-300">
+                <h4 className="font-serif text-2xl font-black mt-2 leading-tight hover:underline text-[#181717] group-hover:text-[#800020] group-active:text-[#800020] transition-colors duration-300">
                   {article.title}
-                </h3>
+                </h4>
                <p className="mt-3 text-sm text-zinc-500 line-clamp-2 font-sans leading-relaxed">
                   {article.excerpt}
                 </p>

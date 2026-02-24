@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="sticky top-0 z-100 w-full border-b border-zinc-200 bg-[#d7d5c6]/80 backdrop-blur-md">
+    <nav className="sticky top-0 z-100 w-full border-b border-zinc-200 bg-[#d2d2d2]/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-6">
         <Link href="/" className="shrink-0">
           <h1 className="font-serif text-2xl font-black tracking-tighter text-[#800020] md:text-3xl">
